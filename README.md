@@ -9,12 +9,13 @@ A modern React shopping application with a complete build process and developmen
 - **Product Catalog**: Browse through a collection of products with images and prices
 - **Shopping Cart**: Add and remove items from your cart with real-time total calculation
 - **Responsive Design**: Mobile-friendly layout that works on all devices
-- **Modern React**: Built with React 18 and functional components with hooks
+- **Modern React**: Built with React 18, TypeScript, and functional components with hooks
 - **Hot Module Replacement**: Development server with live reloading
 
 ## Tech Stack
 
 - **React 18** - Modern JavaScript library for building user interfaces
+- **TypeScript** - Strongly typed programming language that builds on JavaScript
 - **Webpack 5** - Module bundler with development server
 - **Babel** - JavaScript transpiler for modern JS features
 - **CSS3** - Modern styling with flexbox and grid layouts
@@ -77,12 +78,13 @@ shopping/
 ├── public/
 │   └── index.html          # HTML template
 ├── src/
-│   ├── App.js              # Main application component
+│   ├── App.tsx             # Main application component (TypeScript)
 │   ├── App.css             # Application styles
-│   ├── index.js            # Entry point
+│   ├── index.tsx           # Entry point (TypeScript)
 │   └── index.css           # Global styles
 ├── dist/                   # Production build output
 ├── webpack.config.js       # Webpack configuration
+├── tsconfig.json           # TypeScript configuration
 ├── package.json            # Dependencies and scripts
 └── README.md              # This file
 ```
@@ -93,6 +95,7 @@ shopping/
 - `npm run build` - Create production build
 - `npm run dev` - Create development build
 - `npm test` - Run tests (placeholder)
+- `npx tsc --noEmit` - Run TypeScript type checking
 
 ## Contributing
 
