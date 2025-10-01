@@ -1,25 +1,32 @@
 import React, { useState } from 'react';
 import './App.css';
 
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+}
+
 function App() {
-  const [products] = useState([
+  const [products] = useState<Product[]>([
     { id: 1, name: 'T-Shirt', price: 19.99, image: '👕' },
     { id: 2, name: 'Jeans', price: 49.99, image: '👖' },
     { id: 3, name: 'Sneakers', price: 79.99, image: '👟' },
     { id: 4, name: 'Hat', price: 24.99, image: '🧢' }
   ]);
 
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState<Product[]>([]);
 
-  const addToCart = (product) => {
+  const addToCart = (product: Product): void => {
     setCart([...cart, product]);
   };
 
-  const removeFromCart = (productId) => {
+  const removeFromCart = (productId: number): void => {
     setCart(cart.filter(item => item.id !== productId));
   };
 
-  const getTotalPrice = () => {
+  const getTotalPrice = (): string => {
     return cart.reduce((total, item) => total + item.price, 0).toFixed(2);
   };
 
